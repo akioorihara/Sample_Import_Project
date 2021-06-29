@@ -13,7 +13,7 @@ namespace Sample_Import_Project
 
         private void BrowseButton_Click(object sender, EventArgs e)
         {
-                        // The OpenFileDialog allows us to pop-up a new window where the user can select a file from their computer
+            // The OpenFileDialog allows us to pop-up a new window where the user can select a file from their computer
             OpenFileDialog openFileDialog = new OpenFileDialog();
 
             // Set some properties on the Open File dialog before we display it to the user
