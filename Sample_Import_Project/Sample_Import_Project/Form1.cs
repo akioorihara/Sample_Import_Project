@@ -100,6 +100,7 @@ namespace Sample_Import_Project
 
 
             //FirstLast testFirstLast = new FirstLast("Nathan", "Sawyer");
+            //var testFirstLast = new FirstLasat("Nathan", "Sawyer");
         }
     }
 
@@ -108,6 +109,7 @@ namespace Sample_Import_Project
     {
         string FirstName;
         string LastName;
+        int Id; 
 
         public FirstLast()
         {
@@ -118,6 +120,12 @@ namespace Sample_Import_Project
         {
             FirstName = First;
             LastName = Last;
+        }
+        public FirstLast(string First, string Last, int id)
+        {
+            FirstName = First;
+            LastName = Last;
+            Id = id;
         }
     }
 }
