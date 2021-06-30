@@ -109,13 +109,12 @@ namespace Sample_Import_Project
     {
         string FirstName;
         string LastName;
-        int Id; 
+        int Id;
 
         public FirstLast()
         {
 
         }
-
         public FirstLast(string First, string Last)
         {
             FirstName = First;
