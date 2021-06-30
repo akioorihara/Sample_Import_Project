@@ -14,8 +14,12 @@ namespace Sample_Import_Project
         private void BrowseButton_Click(object sender, EventArgs e)
         {
             // The OpenFileDialog allows us to pop-up a new window where the user can select a file from their computer
-            OpenFileDialog openFileDialog = new OpenFileDialog();  
+            OpenFileDialog openFileDialog = new OpenFileDialog();
             //OpenFileDialog openFileDialog = OpenFileDialog()
+
+            string testString;
+
+            testString = "";
 
             // Set some properties on the Open File dialog before we display it to the user
             openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
@@ -100,7 +104,10 @@ namespace Sample_Import_Project
 
 
             //FirstLast testFirstLast = new FirstLast("Nathan", "Sawyer");
-            //var testFirstLast = new FirstLasat("Nathan", "Sawyer");
+            var testFirstLast = new FirstLast("Nathan", "Sawyer", Suffix.Mr);
+
+
+            var firstLast = new FirstLast();
         }
     }
 
@@ -111,14 +118,18 @@ namespace Sample_Import_Project
         string LastName;
         int Id;
 
+        Suffix personSuffix;
+
         public FirstLast()
         {
-
+            FirstName = "empty";
+            LastName = "user";
         }
-        public FirstLast(string First, string Last)
+        public FirstLast(string First, string Last, Suffix suffix)
         {
             FirstName = First;
             LastName = Last;
+            personSuffix = suffix;
         }
         public FirstLast(string First, string Last, int id)
         {
@@ -126,5 +137,15 @@ namespace Sample_Import_Project
             LastName = Last;
             Id = id;
         }
+    }
+
+
+    public enum Suffix
+    {
+        Mr,
+        Mrs,
+        Dr,
+        Sir,
+        Maam
     }
 }
